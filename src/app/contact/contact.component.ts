@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl,Validators } from '@angular/forms';
+import {ContactService} from './contact.service'
 
 @Component({
   selector: 'app-contact',
@@ -7,16 +8,25 @@ import { FormGroup, FormControl } from '@angular/forms';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
+  contactform:FormGroup;
+  submitted = false;  
 
-  contactform =  new FormGroup({
-    username : new FormControl(),
-    password : new FormControl()
-   }
-  );
-
-  constructor() { }
+  constructor(private service:ContactService) { }
 
   ngOnInit() {
+   // this.submitted=true;
+    this.contactform=new FormGroup({
+      name: new FormControl('' , [Validators.required , Validators.minLength(5) ] ),  
+      email: new FormControl('' , [Validators.required , Validators.minLength(5) ] ),
+      phone: new FormControl('' , [Validators.required , Validators.minLength(5) ] ),
+      message: new FormControl('' , [Validators.required , Validators.minLength(5) ] ),
+    })
   }
+addcontact(){
+  this.service.savecontact(this.contactform.value).subscribe(reponse => { })
+  this.contactform=null;
+  //this.submitted=true;
+  console.log(this.contactform.value);
 
+}
 }
