@@ -11,7 +11,7 @@ body{
     width:1000px;
     /*border:1px solid #fff;*/
     margin:7% auto;
-    
+
   }
   .main div{
     display: inline-block;
@@ -89,7 +89,7 @@ body{
 
 
 
- 
+
   .left h1{
     text-align: center;
     /*padding-left:120px;*/
@@ -118,7 +118,7 @@ body{
     border:1px solid #F8F8F8;
     background-color:#F8F8F8;
     border-radius:100px;
-    
+
   }
 .back form input:focus{
     outline:none;
@@ -128,11 +128,11 @@ body{
     letter-spacing: 1px;
   }
  .back form input[type="submit"]{
-  
+
     color:rgb(39, 165, 148);
     font-weight: bold;
     background:#FFBF37;
-  
+
   }
   .back p.forgot{
     color:grey;
@@ -291,7 +291,7 @@ max-width: 450px;
      .mybtn{
      border-radius:50px;
      }
-    
+
      .login-or {
      position: relative;
      color: #aaa;
@@ -329,6 +329,7 @@ max-width: 450px;
      #second{display:none;}
 
      .singup{
+       padding: 30px;
 width: 450px;
 margin-left: 40px;
 
