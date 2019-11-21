@@ -1,48 +1,54 @@
 <section class="page-section" id="contact">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <h2 class="section-heading text-uppercase">Reserve Service</h2>
-        </div>
+  <div class="container">
+    <div class="row">
+
+      <div class=" offset-11 ">
+        <p class="text-center "><a [routerLink]="['']" routerLinkActive="router-link-active">LOGOUT</a></p>
       </div>
-      <div class="row">
-        <div class="col-lg-12">
-          <form    [formGroup]="servicesform">
-            <div class="row">
-              <div class="col-md-6">
-
-                <div class="input-group">
-                    <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon">
-                      <option selected>Choose a service *</option>
-                      <option value="1">Electricité</option>
-                      <option value="2">RENOVATION</option>
-                      <option value="3">PLOMBIERIE</option>
-                      <option value="4">PEINTURE</option>
-                      <option value="5">MACONNERIE</option>
-                      <option value="6">CHAUFFAGE</option>
-                      <option value="7">ISOLATION</option>
-                      <option value="8">MENUISERIE</option>
-
-                    </select>
-                  </div>
-                  <div class="form-group">
-                    <input type="date"  class="form-control"  formControlName="date" >   
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="form-group">
-                  <textarea class="form-control" id="message" formControlName="message" placeholder="Your Comments " required="required" data-validation-required-message="Please enter a message."></textarea>
-                  <p class="help-block text-danger"></p>
-                </div>
-              </div>
-              <div class="clearfix"></div>
-              <div class="col-lg-12 text-center">
-                <div id="success"></div>
-                <button id="sendMessageButton" (click)=f() class="btn btn-primary btn-xl text-uppercase" type="submit">Valider</button>
-              </div>
-            </div>
-          </form>
-        </div>
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading text-uppercase">Reserve Service</h2>
       </div>
     </div>
-  </section>
+    <div class="row">
+      <div class="col-lg-12">
+        <form [formGroup]="servicesform">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="input-group">
+                <select class="custom-select" formControlName="titre" id="inputGroupSelect04"
+                  aria-label="Example select with button addon">
+                  <option selected>Choose a service *</option>
+                  <option value="1">Electricité</option>
+                  <option value="2">RENOVATION</option>
+                  <option value="3">PLOMBIERIE</option>
+                  <option value="4">PEINTURE</option>
+                  <option value="5">MACONNERIE</option>
+                  <option value="6">CHAUFFAGE</option>
+                  <option value="7">ISOLATION</option>
+                  <option value="8">MENUISERIE</option>
+
+                </select>
+              </div>
+              <div class="form-group">
+                <input type="date" class="form-control" formControlName="date">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <textarea class="form-control" id="message" formControlName="decription" placeholder="Your Comments "
+                  required="required" data-validation-required-message="Please enter a message."></textarea>
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="col-lg-12 text-center">
+              <div id="success"></div>
+              <button id="sendMessageButton" (click)=f() class="btn btn-primary btn-xl text-uppercase"
+                type="submit">Valider</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

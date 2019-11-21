@@ -6,7 +6,7 @@ import{HttpClient,HttpHeaders} from '@angular/common/http'
 export class ContactService {
 
   constructor(private http:HttpClient) { }
-URL='http://localhost:9090/contact/add';
+URL='http://localhost:9000/contact/add';
 
 savecontact(contact){
 

@@ -10,31 +10,31 @@
                 <form  [formGroup]="registerform ">
                     <div class="form-group">
                         <label for="exampleInputEmail1">Full Name</label>
-                        <input type="text" name="firstname" class="form-control"
-                            aria-describedby="emailHelp" placeholder="Enter Firstname">
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Username</label>
-                        <input type="text" name="lastname" class="form-control"
-                            aria-describedby="emailHelp" placeholder="Enter Lastname">
+                        <input type="text" formControlName="username" class="form-control"
+                            aria-describedby="emailHelp" placeholder="Enter Fullname">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputEmail1">Address</label>
-                        <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp"
+                        <input type="text" formControlName="adresse"class="form-control"
+                            aria-describedby="emailHelp" placeholder="Enter Lastname">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Telephone</label>
+                        <input type="text"formControlName="tel"class="form-control"  aria-describedby="emailHelp"
                             placeholder="Enter Address">
                     </div>
                     <div class="form-group">
                       <label for="exampleInputEmail1">Email:</label>
-                      <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp"
+                      <input type="email" formControlName="email" class="form-control" id="email" aria-describedby="emailHelp"
                           placeholder="Enter email">
                   </div>
                     <div class="form-group">
                         <label for="exampleInputEmail1">Password</label>
-                        <input type="password" name="password" id="password" class="form-control"
+                        <input type="password" formControlName="password"  class="form-control"
                             aria-describedby="emailHelp" placeholder="Enter Password">
                     </div>
                     <div class="col-md-12 text-center mb-3">
-                        <button type="submit" class=" btn btn-block mybtn btn-primary tx-tfm">Get Started For
+                        <button type="submit" (click)= registre() class=" btn btn-block mybtn btn-primary tx-tfm">Get Started For
                             Free</button>
                     </div>
                     <div class="col-md-6 ">
@@ -44,7 +44,7 @@
                     <div class="col-md-12 ">
                       <div class="form-group">
                           <p class="text-center"><a [routerLink]="['/login']" routerLinkActive="router-link-active" id="signin">Already have an account?</a></p>
-
+                          
                           <p class="text-center "><a [routerLink]="['']" routerLinkActive="router-link-active" id="signin">Go back to home?</a></p>
                       </div>
                   </div>

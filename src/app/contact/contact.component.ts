@@ -14,7 +14,6 @@ export class ContactComponent implements OnInit {
   constructor(private service:ContactService) { }
 
   ngOnInit() {
-   // this.submitted=true;
     this.contactform=new FormGroup({
       name: new FormControl('' , [Validators.required , Validators.minLength(5) ] ),  
       email: new FormControl('' , [Validators.required , Validators.minLength(5) ] ),
@@ -25,7 +24,6 @@ export class ContactComponent implements OnInit {
 addcontact(){
   this.service.savecontact(this.contactform.value).subscribe(reponse => { })
   this.contactform=null;
-  //this.submitted=true;
   console.log(this.contactform.value);
 
 }

@@ -15,6 +15,9 @@
           <a class="nav-link js-scroll-trigger" href="#portfolio">services</a>
         </li>
         <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" *ngIf="loginService.isUserLoggedIn()" [routerLink]="['/service']"   class="nav-link">Ajouter Service</a>
+          </li>
+        <li class="nav-item">
           <a class="nav-link js-scroll-trigger" href="#about">ouvriers</a>
         </li>
         <li class="nav-item">
@@ -30,6 +33,7 @@
         <li class="nav-item">
             <a class="nav-link js-scroll-trigger" *ngIf="loginService.isUserLoggedIn()" [routerLink]="['/logout']"   class="nav-link">LogOut</a>
           </li>
+
       </ul>
     </div>
   </div>
@@ -42,7 +46,7 @@
       <div class="intro-lead-in">ALL in One</div>
       <div class="intro-heading text-uppercase">LES OUVRIERS
         MULTI-SERVICES</div>
-      <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>
+      <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#about">Tell Me More</a>
     </div>
   </div>
 </header>
