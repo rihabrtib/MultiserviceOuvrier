@@ -12,20 +12,23 @@
       <ul class="navbar-nav text-uppercase ml-auto">
 
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#portfolio">services</a>
+          <a class="nav-link js-scroll-trigger" href="#home">Home</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" *ngIf="loginService.isUserLoggedIn()" [routerLink]="['/service']"   class="nav-link">Ajouter Service</a>
+          <a class="nav-link js-scroll-trigger" href="#portfolio">Services</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" *ngIf="loginService.isUserLoggedIn()" [routerLink]="['/service']"   class="nav-link">Reserve Service</a>
           </li>
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#about">ouvriers</a>
+          <a class="nav-link js-scroll-trigger" href="#about">About Us</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger"  *ngIf="!loginService.isUserLoggedIn()" [routerLink]="['/login']" routerLinkActive="router-link-active"  class="nav-link">sign in</a>
+          <a class="nav-link js-scroll-trigger"  *ngIf="!loginService.isUserLoggedIn()" [routerLink]="['/login']" routerLinkActive="router-link-active"  class="nav-link">Sign In</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" *ngIf="!loginService.isUserLoggedIn()" [routerLink]="['/signup']"   href="#team">sign up</a>
+          <a class="nav-link js-scroll-trigger" *ngIf="!loginService.isUserLoggedIn()" [routerLink]="['/signup']"   href="#team">Sign Up</a>
         </li>
         <li class="nav-item">
           <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
@@ -40,10 +43,10 @@
 </nav>
 
 <!-- Header -->
-<header class="masthead">
+<header class="masthead" id="home">
   <div class="container">
     <div class="intro-text">
-      <div class="intro-lead-in">ALL in One</div>
+      <div class="intro-lead-in">ALL In One</div>
       <div class="intro-heading text-uppercase">LES OUVRIERS
         MULTI-SERVICES</div>
       <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#about">Tell Me More</a>

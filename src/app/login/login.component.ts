@@ -31,9 +31,11 @@ export class LoginComponent implements OnInit {
       data => {
         this.router.navigate(['service']);
         this.invalidLogin = false;
+
       },
       error => {
         this.invalidLogin = true;
+        alert("email n'existe pas ");
 
       }
     )

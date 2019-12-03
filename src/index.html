@@ -125,10 +125,11 @@
 
     $(function () {
 
-      $("form[name='registration']").validate({
+      $("form[name='registerform']").validate({
         rules: {
-          firstname: "required",
-          lastname: "required",
+          username: "required",
+          adresse: "required",
+          tel:"required",
           email: {
             required: true,
             email: true
@@ -155,6 +156,7 @@
       });
     });
   </script>
+
 </body>
 <app-root></app-root>
 
