@@ -1,9 +1,8 @@
 <section class="page-section" id="contact">
-  <div class="container">
+  <div class="container-fluid">
     <div class="row">
-
       <div class=" offset-11 ">
-        <p class="text-center "><a [routerLink]="['']" routerLinkActive="router-link-active">LOGOUT</a></p>
+        <p class="text-center "><a [routerLink]="['']" routerLinkActive="router-link-active">Home</a></p>
       </div>
       <div class="col-lg-12 text-center">
         <h2 class="section-heading text-uppercase">Reserve Service</h2>
@@ -13,21 +12,20 @@
       <div class="col-lg-12">
         <form [formGroup]="servicesform">
           <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-6 offset-3">
               <div class="form-group">
-                <select class="custom-select" formControlName="titre" id="inputGroupSelect04" 
+                <select class="custom-select" formControlName="titre" id="inputGroupSelect04" id="select"
                   aria-label="Example select with button addon">
                   <p class="help-block text-danger"></p>
-
                   <option selected>Choose a service *</option>
-                  <option value="service.nom" *ngFor= "let service of services">{{service.nom}}</option>
+                  <option value={{service.id}} *ngFor= "let service of services">{{service.titre}}</option>
                 </select>
               </div>
               <div class="form-group">
                 <input type="date" class="form-control" formControlName="date">
               </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 offset-3">
               <div class="form-group">
                 <textarea class="form-control" id="message" formControlName="decription" placeholder="Your Comments "
                   required="required" data-validation-required-message="Please enter a message."></textarea>

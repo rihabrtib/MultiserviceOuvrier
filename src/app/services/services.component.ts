@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import * as jwt_decode from 'jwt-decode';
-import {ReserveService} from './reserve.service';
+import {ReserveService, Services} from './reserve.service';
 
 
 @Component({
@@ -10,49 +10,34 @@ import {ReserveService} from './reserve.service';
   styleUrls: ['./services.component.css']
 })
 export class ServicesComponent implements OnInit {
+
+
   token: any;
-  servicesform=new FormGroup({
+  services: Services[];
+  servicesform = new FormGroup({
     titre : new FormControl(),
     date : new FormControl(),
     decription : new FormControl(),
   });
+value: any;
 
-  public services = [
-{
-  nom : 'Electricité'
-},
-{
-  nom : 'Rennovation'
-},
-{
-  nom : 'Plomberie'
-},
-{
-  nom : 'Peinture'
-},
-{
-  nom : 'Maconnerie'
-},
-{
-  nom : 'Chauffage'
-},
-{
-  nom : 'Menuiserie'
-},
-{
-  nom : 'Isolation'
-}
-
-  ]
-
-  constructor(private service :ReserveService) { }
+  constructor(private service: ReserveService) { }
 
   ngOnInit() {
+    this.getServices();
   }
 
-addservice(){
-this.service.saveservice(this.servicesform.value).subscribe(reponse=>{})
+addservice() {
+  const e = document.getElementById('select');
+  const option = e['options']
+  this.value = option[e['selectedIndex']].value;
 
+  this.service.saveservice(this.value , this.servicesform.value).subscribe(reponse => {} );
+}
+getServices() {
+this.service.getservice().subscribe(res => {
+  this.services = res;
+});
 }
 }
 
